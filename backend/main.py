@@ -52,8 +52,8 @@ posts: list[dict] = [
 # def home():
 #     return f"<h1>{posts[0]['title']}</h1>"
 
-@app.get("/",  include_in_schema=False)
-@app.get("/posts", include_in_schema=False)
+@app.get("/",  include_in_schema=False, name="home")
+@app.get("/posts", include_in_schema=False, name="posts")
 def home(request: Request):
     return templates.TemplateResponse(request, "home.html", {"posts": posts})
 
