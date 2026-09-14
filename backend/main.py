@@ -24,6 +24,8 @@ app.mount("/media", StaticFiles(directory="media"), name="media")
 templates = Jinja2Templates(directory="templates")
 
 
+
+
 # posts: list[dict] = [
 #     {
 #         "id": 1,
